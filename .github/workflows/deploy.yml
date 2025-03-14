@@ -37,8 +37,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "duncanrober-whomwah-web-49"
+          project: "whomwah"
           entrypoint: "https://deno.land/std@0.217.0/http/file_server.ts"
           root: "dist"
-          
-          
