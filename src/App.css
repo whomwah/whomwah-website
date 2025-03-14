@@ -8,14 +8,12 @@
 /* Main container for centering content */
 .container {
   display: flex;
-  padding: 2rem 0;
   min-height: 100vh;
 }
 
 /* Content box for appropriate width constraints */
 .content-box {
   max-width: 700px;
-  width: 100%;
   margin: 0 auto;
 }
 
@@ -81,10 +79,6 @@ a:hover {
 
 /* Media queries for responsive design */
 @media (max-width: 768px) {
-  .container {
-    padding: 1.5rem;
-  }
-
   h1 {
     font-size: 2.2rem;
     margin-bottom: 1.2rem;
@@ -98,11 +92,18 @@ a:hover {
 
 /* Small mobile devices (iPhone-sized viewports) */
 @media (max-width: 430px) {
-  .container {
-    padding: 1.25rem;
-  }
-
   .content-box {
     padding: 0 1rem;
   }
+}
+
+.html-content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.canvas-content {
+  width: 100%;
 }
