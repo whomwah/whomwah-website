@@ -1,0 +1,79 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+
+/* Main container for centering content */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  min-height: 100vh;
+}
+
+/* Content box for appropriate width constraints */
+.content-box {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Heading styling */
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+/* Paragraph spacing and readability */
+p {
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Link styling */
+a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Social links container */
+.social-links {
+  display: flex;
+  justify-content: center;
+}
+
+/* Individual social link styling */
+.social-link {
+  color: #242424;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  text-decoration: none;
+  animation: spin 0.2s linear infinite;
+}
+
+/* Icon styling */
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Spinning animation for social links */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

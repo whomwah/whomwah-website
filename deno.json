@@ -1,0 +1,9 @@
+{
+  "deploy": {
+    "exclude": [
+      "**/node_modules"
+    ],
+    "include": [],
+    "entrypoint": "jsr:@std/http/file-server"
+  }
+}
