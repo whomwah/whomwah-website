@@ -8,10 +8,7 @@
 /* Main container for centering content */
 .container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  padding: 2rem 1rem;
+  padding: 2rem 0;
   min-height: 100vh;
 }
 
@@ -25,12 +22,15 @@
 /* Heading styling */
 h1 {
   margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  line-height: 1.2;
 }
 
 /* Paragraph spacing and readability */
 p {
   line-height: 1.6;
   margin-bottom: 1rem;
+  font-size: 1.2rem;
 }
 
 /* Link styling */
@@ -47,6 +47,7 @@ a:hover {
 .social-links {
   display: flex;
   justify-content: center;
+  margin-top: 1.5rem;
 }
 
 /* Individual social link styling */
@@ -75,5 +76,33 @@ a:hover {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1.2rem;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+/* Small mobile devices (iPhone-sized viewports) */
+@media (max-width: 430px) {
+  .container {
+    padding: 1.25rem;
+  }
+
+  .content-box {
+    padding: 0 1rem;
   }
 }
