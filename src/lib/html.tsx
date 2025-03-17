@@ -20,18 +20,7 @@ export function Html() {
         <a href="https://kyan.com" title="My current employer">
           Kyan
         </a>
-        . In a previous life I've computed for the{" "}
-        <a href="https://www.bbc.co.uk/programmes" title="My previous employer">
-          BBC
-        </a>
-        , designed and built mountain bike parts, programmed{" "}
-        <a
-          href="https://en.wikipedia.org/wiki/Numerical_control"
-          title="My previous career"
-        >
-          mechanical machines
-        </a>
-        , and dabbled in nuclear power.
+        .
       </p>
       <div className="social-links">
         <a
