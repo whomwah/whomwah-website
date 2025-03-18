@@ -19,7 +19,7 @@ function App() {
           <Clouds material={MeshBasicMaterial}>
             <Cloud
               segments={20}
-              bounds={[4, 0.1, 2]}
+              bounds={[8, 0.1, 2]}
               volume={10}
               color="orange"
               speed={0.1}
@@ -27,7 +27,7 @@ function App() {
             />
             <Cloud
               seed={1}
-              bounds={[4, 0.5, 2]}
+              bounds={[8, 0.5, 2]}
               scale={1}
               volume={5}
               color="yellow"
