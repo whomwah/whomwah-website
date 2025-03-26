@@ -19,6 +19,7 @@
 
 /* Heading styling */
 h1 {
+  margin-top: 2rem;
   margin-bottom: 0.5rem;
   font-size: 2.8rem;
   line-height: 1.2;
@@ -45,7 +46,7 @@ a:hover {
 .social-links {
   display: flex;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 1.3rem;
 }
 
 /* Individual social link styling */
