@@ -1,11 +1,11 @@
-# whomwah-website
+# whomwah.com
 
-Personal website built with React, TypeScript and Vite.
+My personal website https://whomwah.com built with React, TypeScript and Vite.
 
 ## Features
 
 - Modern React application with TypeScript
-- Vite for fast development and optimized production builds
+- Vite for fast development and optimised production builds
 - Three.js for 3D background animations
 - Responsive design for all device sizes
 
