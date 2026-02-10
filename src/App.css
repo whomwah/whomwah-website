@@ -5,34 +5,55 @@
   width: 100%;
 }
 
-/* Main container for centering content */
 .container {
-  display: flex;
+  position: relative;
   min-height: 100vh;
+  overflow: hidden;
+  background: #fff;
 }
 
-/* Content box for appropriate width constraints */
-.content-box {
-  max-width: 700px;
-  margin: 0 auto;
+.html-shell {
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
 
-/* Heading styling */
 h1 {
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-  font-size: 2.8rem;
-  line-height: 1.2;
-}
-
-/* Paragraph spacing and readability */
-p {
-  line-height: 1.6;
   margin: 0;
-  font-size: 1.2rem;
+  font-family: "Playfair Display", Georgia, serif;
+  font-weight: 300;
+  font-style: normal;
+  font-optical-sizing: auto;
+  font-size: clamp(2.6rem, 9.6vw, 7rem);
+  line-height: 0.92;
+  letter-spacing: -0.005em;
+  font-kerning: normal;
+  font-variant-ligatures: common-ligatures;
+  text-rendering: optimizeLegibility;
+  text-wrap: balance;
+  color: var(--h1, #1f3a6a);
+  opacity: 0.92;
+  text-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Link styling */
+.kern-d {
+  letter-spacing: -0.10em;
+}
+
+.kern-dot {
+  letter-spacing: -0.04em;
+}
+
+.kern-rt {
+  letter-spacing: 0.04em;
+}
+
+.kern-ob {
+  letter-spacing: -0.05em;
+}
+
 a {
   color: #0366d6;
   text-decoration: none;
@@ -42,14 +63,22 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Social links container */
 .social-links {
   display: flex;
-  justify-content: center;
-  margin-top: 1.3rem;
+  padding: 1.5rem;
 }
 
-/* Individual social link styling */
+.page-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  max-width: min(92vw, 1200px);
+  padding: 0 1.25rem;
+}
+
 .social-link {
   color: #242424;
   display: flex;
@@ -62,48 +91,68 @@ a:hover {
   animation: spin 0.2s linear infinite;
 }
 
-/* Icon styling */
+.social-link:focus {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+.social-link:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.social-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .social-link:hover {
+    animation: none;
+  }
+}
+
 .icon {
   width: 30px;
   height: 30px;
 }
 
-/* Spinning animation for social links */
 @keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-/* Media queries for responsive design */
 @media (max-width: 768px) {
   h1 {
-    font-size: 2.2rem;
-  }
-
-  p {
-    font-size: 0.95rem;
-    line-height: 1.5;
+    font-size: clamp(2.24rem, 11.2vw, 4.8rem);
   }
 }
 
-/* Small mobile devices (iPhone-sized viewports) */
 @media (max-width: 430px) {
-  .content-box {
+  .page-title {
     padding: 0 1rem;
   }
 }
 
 .html-content {
-  width: 100%;
-  height: 100%;
   position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 1;
 }
 
 .canvas-content {
-  width: 100vw;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
