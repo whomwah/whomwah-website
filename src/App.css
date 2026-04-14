@@ -181,7 +181,7 @@ a:hover {
   max-width: min(92vw, 600px);
   padding: 0 1.25rem;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
-  color: rgba(255, 255, 255, 0.85);
+  color: rgba(0, 0, 0, 0.85);
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
