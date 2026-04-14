@@ -1,7 +1,7 @@
 import { Canvas } from "@react-three/fiber";
 import { Cloud, Clouds } from "@react-three/drei";
 import type { CSSProperties } from "react";
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { MeshBasicMaterial } from "three";
 import { Html } from "./lib/html";
 import { hslToHex } from "./lib/color";
@@ -46,13 +46,13 @@ const createPalette = () => {
  */
 function App() {
   const palette = useMemo(() => createPalette(), []);
-  const containerStyle =
-    {
-      "--accent": palette.accent,
-      "--accent-soft": palette.accentSoft,
-      "--accent-deep": palette.accentDeep,
-      "--h1": palette.h1Hex,
-    } as CSSProperties;
+  const [canvasReady, setCanvasReady] = useState(false);
+  const containerStyle = {
+    "--accent": palette.accent,
+    "--accent-soft": palette.accentSoft,
+    "--accent-deep": palette.accentDeep,
+    ...(canvasReady && { "--h1": palette.h1Hex }),
+  } as CSSProperties;
 
   return (
     <div className="container" style={containerStyle}>
@@ -60,7 +60,7 @@ function App() {
         <Html />
       </div>
       <div className="canvas-content">
-        <Canvas camera={{ position: [0, 0, 5], fov: 100 }}>
+        <Canvas camera={{ position: [0, 0, 5], fov: 100 }} onCreated={() => setCanvasReady(true)}>
           <Clouds material={MeshBasicMaterial} position={[0, 0, 0]}>
             <Cloud
               segments={20}
