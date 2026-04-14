@@ -36,10 +36,8 @@ export function Html() {
             <span className="kern-rt">r</span>tson
           </span>
         </h1>
-
         <section className="bio" aria-label="About Duncan Robertson">
           <p className="tagline">
-            Software Engineer at{" "}
             <a href="https://kyan.com" rel="noopener noreferrer">
               Kyan
             </a>
